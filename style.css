@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.question {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.title {
+  margin-bottom: 30px;
+}
+ul {
+  list-style: none;
+}
+img {
+  align-self: center;
+  width: 300px;
+  height: 200px;
+}
+.demo {
+  color: green;
+  font-size: 1.25rem;
+  padding: 5px;
+  letter-spacing: 3px;
+}
+button {
+  background-color: blue;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  color: yellow;
+  border-radius: 5px;
+  width: 250px;
+}
+button.move {
+  background-color: red;
+  padding: 10px 10px;
+  color: yellow;
+  border-radius: 7px;
+  width: 150px;
+}
+button:hover {
+  color: green;
+  background-color: rgba(0, 68, 255, 0.474);
+}
+
+.popfail {
+  position: absolute;
+  visibility: hidden;
+}
+.popcorrect {
+  position: absolute;
+  visibility: hidden;
+  z-index: 3;
+}
+.pop img {
+  border-radius: 30%;
+}

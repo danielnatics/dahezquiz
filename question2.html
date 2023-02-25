@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="question">
+      <h1>Question 2</h1>
+      <div class="img"><img src="worldwar.jpg" alt="" /></div>
+      <h3 class="title">When Did World War 2 Start and End?</h3>
+      <div class="answer">
+        <ul>
+          <li><button onclick="wong()" class="wrong">1938 - 1950</button></li>
+          <li><button onclick="wong()" class="correct">1920 - 1925</button></li>
+          <li><button onclick="wong()" class="wrong">1930 - 1936</button></li>
+          <li>
+            <button onclick="correct()" class="wrong">1939 - 1945</button>
+          </li>
+        </ul>
+      </div>
+      <div class="demo"></div>
+    </div>
+    <div class="demo"></div>
+</div>
+<div class="popcorrect">
+  <img id="pass" src="good.png" alt="" />
+
+  <div>
+    <button onclick="back()" class="move">Back</button>
+    <button onclick="next()" class="move">Next</button>
+  </div>
+</div>
+<div class="popfail">
+  <img id="fail" src="fail.png" alt="" />
+  <div>
+    <button onclick="back()" class="move">Back</button>
+    <button onclick="next()" class="move">Next</button>
+  </div>
+</div>
+
+    <script>
+        let score = document.querySelector(".score");
+        let answer = document.querySelector(".demo");
+        let popCorrect = document.querySelector(".popcorrect");
+        let popFail = document.querySelector(".popfail");
+        let question = document.querySelector(".question");
+        let pass = document.getElementById("pass");
+        let fail = document.getElementById("bad");
+        let audio = new Audio("g.mp3");
+        let audio2 = new Audio("no.mp3");
+  
+        //   let wrong = document.querySelectorAll(".wrong");
+        //   let correct = document.querySelector(".correct");
+  
+        //   answer.textContent = "Hello g";
+        popCorrect.style.visibility = "hidden";
+        popFail.style.visibility = "hidden";
+  
+        function correct() {
+          // alert("wrong");
+          answer.textContent = "CORRECT";
+          popCorrect.style.visibility = "visible";
+  
+          question.style.visibility = "hidden";
+  
+          audio.play();
+        }
+        function wong() {
+          // alert("wrong");
+          answer.textContent = "WRONG";
+          popFail.style.visibility = "visible";
+          question.style.visibility = "hidden";
+          audio2.play();
+        }
+        function back() {
+          question.style.visibility = "visible";
+          popCorrect.style.visibility = "hidden";
+          popFail.style.visibility = "hidden";
+        }
+        function next() {
+          window.location.href = "question3.html";
+        }
+      </script>
+  
+  </body>
+</html>
